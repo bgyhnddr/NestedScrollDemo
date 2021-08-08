@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bgyhnddr.nestedscrolldemo.ParentScroll xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <com.bgyhnddr.nestedscrolldemo.MainLinerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#03A9F4"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E91E63"
+            android:orientation="horizontal">
+
+            <com.bgyhnddr.nestedscrolldemo.ChildScroll
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="#FFEB3B"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/groupContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </com.bgyhnddr.nestedscrolldemo.ChildScroll>
+
+            <com.bgyhnddr.nestedscrolldemo.ChildScroll
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FF5722"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/goodsContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </com.bgyhnddr.nestedscrolldemo.ChildScroll>
+        </LinearLayout>
+    </com.bgyhnddr.nestedscrolldemo.MainLinerLayout>
+</com.bgyhnddr.nestedscrolldemo.ParentScroll>
